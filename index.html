@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Map API</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap" rel="stylesheet">
+	
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" /> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+<!-- directions plugin -->
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
+<link
+rel="stylesheet"
+href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+type="text/css"
+/>
+</head>
+<body>
+
+
+<div class="container">
+	<div id="mapid" class="mapid" style="width: 50%; height: 500px;">
+		
+	</div> <br>
+	<!-- Lviv PPO -->
+	<div class="description">
+		<div class="paragraph">
+			<a a href="https://lviv.gp.gov.ua/ua/index.html" target="_blank" class="institution"> Lviv Public Prosecution Office</a>
+			<p class="address">проспект Шевченка, 17-19, Львів, Львівська область, 79000</p>
+			<a href="https://goo.gl/maps/PFRD2X1bT3rkk3sAA" target="_blank" class="btn">Google Map</a>
+			<button class="btn" onclick="ppoMarker.openPopup()">Show PPO</button> <br>
+		</div>
+	<br>
+	
+	<!-- Lviv SSU -->
+		<div class="paragraph">
+			<a a href="https://ssu.gov.ua/contacts/upravlinnia" target="_blank" class="institution"> Lviv State Securiry Service Office</a>
+			<p class="address">79012, м. Львів, вул. Вітовського, 55</p>
+			<a href="https://goo.gl/maps/9viPhmGd5Do5LVMM8" target="_blank" class="btn">Google Map</a>
+			<button class="btn" onclick="ssuMarker.openPopup()">Show SSU</button> <br>
+		</div>
+		<br>		
+	<!-- NaLevo International -->
+		<div class="paragraph">
+			<a a href="#" target="_blank" class="institution"> Na Levo, GMBH</a>
+			<p class="address">Lviv, Marcus Rolofs Residence, Politechnichnyi Avenue</p>
+			<a href="https://goo.gl/maps/CLf6iHG6xb9Q6edM8" target="_blank" class="btn">Google Map</a>
+			<button class="btn" onclick="marcusPolygon.openPopup()">Show Rolofskyi Rayon</button> <br>
+		</div>
+	</div>	
+
+	
+	
+
+
+	<!-- <div id='map' class='mymap' style='width: 50%; height: 500px;'></div> -->
+</div>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
